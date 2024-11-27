@@ -38,7 +38,7 @@ hue_colors={"Car&Motorbike":"blue",
 sns.scatterplot(x="rating", y="rating_count", data=df, hue="product_category", palette=hue_colors)
 plt.show()
 ```
-<img width="446" alt="average of all products " src="https://github.com/user-attachments/assets/e28fbf33-001e-48a1-9b39-15b1b56d2ae8">
+![Visualization of all product based on rating and rating count by categories]([Amazon_Rating_Sales/Image/average of all products.png](https://github.com/ArrofiFahmi/Amazon_Rating_Sales/blob/main/Images/average%20of%20all%20products%20.png))
 <br> *Visualization of all product based on rating and rating count by categories*
   
 ### Insights into Probabilities of Top Skills appearing in Job Posts for Entry Level Data Roles
@@ -47,5 +47,20 @@ plt.show()
 ### Summary
 
 ## 2. What is the relationship between the discounted price and the number of ratings?
+To see how far the effect from the relationship is to getting insgiht for better action.
+### Data Visualization and Results
+```python
+hue_colors={"Car&Motorbike":"blue", 
+            "Computers&Accessories":"green",
+            "Electronics":"red",
+            "Health&PersonalCare":"cyan",
+            "Home&Kitchen":"magenta",
+            "HomeImprovement":"yellow",
+            "MusicalInstruments":"black",
+            "OfficeProducts":"olive",
+            "Toys&Games":"grey"}
+sns.scatterplot(x="rating_count", y="discounted_price", data=df, hue="product_category", palette=hue_colors)
+plt.show()
+```
 ## 3. What are the Top 5 Ranking Products Based on Categories?
 ## 4. What are the Lowest 5 Ranking Products Based on Categories?
