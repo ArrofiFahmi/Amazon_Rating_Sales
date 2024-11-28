@@ -16,8 +16,8 @@ Libraries:
   - Matplotlib/Seaborn: For data visualization.
   - NumPy: For numerical operations.
 
-To view the initial data exploration, click here:
-[1_EDA_intro](Python_Data_Project/3_Project/1_EDA_intro.ipynb)
+To view the initial data cleaning and manipulation, click here:
+[Amazon Sales Data Cleaning and Manipulation](https://github.com/ArrofiFahmi/Amazon_Rating_Sales/blob/b6a965ab5f4b0c407c2baf46aa39b760eac23b45/Amazon%20Data%20Cleaning%20and%20Manipulation.ipynb)
 
 ---
 
@@ -39,18 +39,17 @@ sns.scatterplot(x="rating", y="rating_count", data=df, hue="product_category", p
 plt.show()
 ```
 ![image alt](https://github.com/ArrofiFahmi/Amazon_Rating_Sales/blob/main/Images/average%20all%20of%20product.png?raw=true)
-### Insights into Probabilities of Top Skills appearing in Job Posts for Entry Level Data Roles
 #### Key Observations:
   - Rating : The product ratings range from 2.0 to 5.0, with most data points concentrated between 3.5 and 5.0.
-  - Rating Count : The number of ratings varies widely, reaching up to 400,000+ for some products.
-  - Category Diversity: Different categories, such as Electronics, Home&Kitchen, and Health&PersonalCare, dominate the distribution. Each is color-coded for better   distinction.
+  - Rating Count : The number of ratings varies widely, reaching up to 300,000+ for some products.
+  - Category Diversity: Different categories, such as Electronics, Home&Kitchen, and Computer & Accesories, dominate the distribution. Each is color-coded for better   distinction.
 #### Key Analysis:
   1. Distribution Across Categories:
       - Electronics (red):This category has a strong presence, with some products achieving very high rating counts (above 300,000). These are typically highly rated (4.0–4.5), indicating both popularity and customer satisfaction.
-      - Computers&Accessories (green): While not as widespread as Electronics, this category shows consistent ratings between 3.5 and 4.5. Some items have notable review counts (~100,000+).
+      - Computers&Accessories (green): While not as widespread as Electronics, this category shows consistent ratings between 3.5 and 4.5. Some items have notable review counts (100,000+).
       - Home&Kitchen (pink): Products in this category are clustered between ratings of 3.5 and 4.5, with review counts mostly under 100,000.
   2. High Rating Count Products:
-     - A few products, particularly in Electronics and Health&PersonalCare, stand out with exceptionally high rating counts, suggesting strong market engagement.
+     - A few products, particularly in Electronics and Home & Kitchen, stand out with exceptionally high rating counts, suggesting strong market engagement.
   3. General Trends:
      - A significant proportion of products, across most categories, have ratings clustered around 4.0 to 4.5, which is typical for popular and well-regarded items.
      - Products rated below 3.0 are sparse, indicating that poorly rated products may not gain substantial customer attention.
@@ -72,11 +71,10 @@ plt.ylabel("Discount Percentage", fontsize=14)
 plt.show()
 ```
 ![image alt](https://github.com/ArrofiFahmi/Amazon_Rating_Sales/blob/main/Images/Rating%20vs%20Discount%20Percentage%20by%20Product%20Category.png?raw=true)
-### Insights into Probabilities of Top Skills appearing in Job Posts for Entry Level Data Roles
 #### Key Observations:
   - Rating : Product ratings range from 2.0 to 5.0, with the majority concentrated between 3.5 and 4.5.
   - Discounted Percentage : Discount percentages range from 0% to 80%, with many data points around 40% to 60%
-  - Category Diversity: Categories such as Electronics, Home&Kitchen, and Health&PersonalCare are well-represented, with some variation in their distribution across the discount and rating spectrum.
+  - Category Diversity: Categories such as Electronics, Home & Kitchen, and Computer & Accessories are well-represented, with some variation in their distribution across the discount and rating spectrum.
 #### Key Analysis:
   1. Rating Trends Across Discounts:
      - Products with higher ratings (above 4.0) tend to be offered across a wide range of discount percentages, particularly between 20% and 80%.
@@ -84,14 +82,13 @@ plt.show()
   2. Category Patterns:
      - Electronic: This category dominates across all rating levels but is especially prominent at high ratings (above 4.0) with varied discount percentages, indicating strong performance even with modest discounts.
      - Home & Kitchen: Concentrated in the mid-range ratings (3.5–4.0), with a tendency toward higher discounts (above 40%), suggesting promotions to improve engagement in this category.
-     - Health & Personal Care: Appears across high ratings (4.0–4.5) with mid-level discount percentages (~30% to 50%), indicating a balance between demand and discounting strategy.
   3. Overall Trends:
      - High-discount products (above 60%) are more likely to be associated with high ratings (4.0+), suggesting effective promotional campaigns or that discounts attract higher customer satisfaction.
      - Products with low discounts (below 20%) are present across all ratings but are less common, suggesting discounts play a significant role in boosting product appeal.
 ### Summary
-The scatter plot reveals a positive relationship between higher discounts (40%–80%) and products with higher ratings (4.0+), especially in categories like Electronics and Health&PersonalCare. This indicates that effective discounting strategies can enhance product ratings or vice versa. Categories like Home&Kitchen may rely on discounts to drive engagement for mid-rated products, while high-performing products maintain popularity across diverse discount levels.
+The scatter plot reveals a positive relationship between higher discounts (40%–80%) and products with higher ratings (4.0+), especially in categories like Electronics and Computer & Accesories. This indicates that effective discounting strategies can enhance product ratings or vice versa. Categories like Home&Kitchen may rely on discounts to drive engagement for mid-rated products, while high-performing products maintain popularity across diverse discount levels.
 ## 3. What are the Top 5 Ranking Products Based on Categories?
-To identify what the product having good rating are and how can we response it. 
+To identify what the product having good rating are and how we can response it. 
 ### Data Visualization and Results
 ```python
 def plot_top5_product_types(df, category_col, product_col, rating_col, rating_count_col):
@@ -156,7 +153,6 @@ plot_top5_product_types(df, "product_category", "product_type", "rating", "ratin
 
 ![image alt](https://github.com/ArrofiFahmi/Amazon_Rating_Sales/blob/main/Images/Top%205%20Product%20Types%20in%20Other%20Category.png?raw=true)
 
-### Insights into Probabilities of Top Skills appearing in Job Posts for Entry Level Data Roles
 #### Key Observations:
   1. Home & Kitchen:
      -Top products in this category include SmallApplianceParts&Accessories, PaintingMaterials, CoffeePresses, AirFryers, and Paints.
@@ -176,18 +172,18 @@ plot_top5_product_types(df, "product_category", "product_type", "rating", "ratin
      -Ratings is variated, with Cord Management 4.5 and Condenser 3.9.
 #### Key Analysis:
   1. High Rating Across Categories:
-     - Across all three categories, the top products consistently maintain ratings above 4.4, suggesting strong quality and customer satisfaction.
+     - Across all 5 categories, the top products consistently maintain ratings above 4.4, suggesting strong quality and customer satisfaction.
      - Tablets in the Computers & Accessories category stand out as the highest-rated product among all categories analyzed.
   2. Specific Trends by Category:
-     -Home & Kitchen: Product types with utility or creative use, like CoffeePresses and AirFryers, rank highly, indicating strong demand for functional and innovative products in this category.
-     -Electronics: Essential tech-related accessories like StreamingClients and SurgeProtectors dominate, showing consumer reliance on key accessories for electronic setups.
-     -Computers & Accessories: Peripheral items like DVICables and EthernetCables still hold strong ratings, reflecting quality expectations for necessary computing components.
+     -Home & Kitchen: Product types with utility or creative use, like Coffee Presses and Air Fryers, rank highly, indicating strong demand for functional and innovative products in this category.
+     -Electronics: Essential tech-related accessories like Streaming Clients and Surge Protectors dominate, showing consumer reliance on key accessories for electronic setups.
+     -Computers & Accessories: Peripheral items like DVI Cables and Ethernet Cables still hold strong ratings, reflecting quality expectations for necessary computing components.
   3. Customer Priorities:
      - Categories with higher technological or practical usage tend to have more tightly clustered high ratings, as seen in Computers & Accessories and Electronics.
-     - Aesthetic or creative tools like PaintingMaterials and Paints in Home & Kitchen maintain high ratings, reflecting niche satisfaction.
+     - Aesthetic or creative tools like Painting Materials and Paints in Home & Kitchen maintain high ratings, reflecting niche satisfaction.
      
 ### Summary
-The analysis identifies top-rated product types for Home & Kitchen, Electronics, and Computers & Accessories. Products that combine innovation, practicality, or niche creativity tend to achieve the highest customer satisfaction. Among all categories, Tablets in Computers & Accessories achieve the highest mean rating, while SmallApplianceParts&Accessories lead in Home & Kitchen, and StreamingClients top the list in Electronics. These findings can guide targeted product promotion and development strategies.
+The analysis identifies top-rated product types for Home & Kitchen, Electronics, Office Product, Other, and Computers & Accessories. Products that combine innovation, practicality, or niche creativity tend to achieve the highest customer satisfaction. Among all categories, Tablets in Computers & Accessories achieve the highest mean rating, Basic lead in Office Products, Cord Management lead in Other, while SmallApplianceParts&Accessories lead in Home & Kitchen, and StreamingClients top the list in Electronics. These findings can guide targeted product promotion and development strategies.
 ## 4. What are the Lowest 5 Ranking Products Based on Categories?
 To see what the product are and how we can fix it or giving recommendations
 ### Data Visualization and Results
@@ -249,7 +245,6 @@ plot_top5_product_types(df, "product_category", "product_type", "rating", "ratin
 ![image alt](https://github.com/ArrofiFahmi/Amazon_Rating_Sales/blob/main/Images/Top%205%20from%20The%20Bottom%20Product%20Types%20by%20Mean%20Rating%20in%20Computer&Accesories%20Categories.png?raw=true)
 ![image alt](https://github.com/ArrofiFahmi/Amazon_Rating_Sales/blob/main/Images/Top%205%20from%20The%20Bottom%20Product%20Types%20by%20Mean%20Rating%20in%20Offices%20Categories.png?raw=true)
 
-### Insights into Probabilities of Top Skills appearing in Job Posts for Entry Level Data Roles
 #### Key Observations:
   1. Electronic: Mean ratings range from 3.5 to 3.8. 3D Glasses have the lowest rating (3.5) in this category, while Remote Controls are rated at 3.8.
   2. Home & Kitchen: The bottom five product types by mean rating range from 3.3 to 3.7. With Electric Grinders have the lowest mean rating of 3.3 and Heat Convector products perform slightly better with a mean rating of 3.7.
