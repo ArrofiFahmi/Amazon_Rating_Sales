@@ -1,7 +1,7 @@
-# Amazon Rating Sales
+# Amazon Rating Review
 
 ## Overview
-This project aims to analyze products, ratings, prices in the Amazon Sales Data. The purpose of this project is to get comprehensive analysis of Amazon sales data to uncover trends, patterns, and actionable insights. This analysis explores customer behaviors, rating sales, and key business metrics to drive data-driven decision-making.
+This project aims to analyze products, ratings, prices in the Amazon Rating Review Data. The purpose of this project is to get comprehensive analysis of Amazon rating review data to uncover trends, patterns, and actionable insights. This analysis explores customer behaviors, rating sales, and key business metrics to drive data-driven decision-making.
 
 ## Research Question
 1. What is the average of all products by category?
@@ -17,7 +17,7 @@ Libraries:
   - NumPy: For numerical operations.
 
 To view the initial data cleaning and manipulation, click here:
-[Amazon Sales Data Cleaning and Manipulation](https://github.com/ArrofiFahmi/Amazon_Rating_Sales/blob/b6a965ab5f4b0c407c2baf46aa39b760eac23b45/Amazon%20Data%20Cleaning%20and%20Manipulation.ipynb)
+[Amazon Data Cleaning and Manipulation](https://github.com/ArrofiFahmi/Amazon_Rating_Sales/blob/b6a965ab5f4b0c407c2baf46aa39b760eac23b45/Amazon%20Data%20Cleaning%20and%20Manipulation.ipynb)
 
 ---
 
